@@ -1,0 +1,63 @@
+{
+    "name": "@leny/twitter-scraper",
+    "version": "0.0.0",
+    "description": "A simple scraper to gather users' stats from twitter profile.",
+    "keywords": [
+        "tools",
+        "scraper",
+        "twitter",
+        "stats"
+    ],
+    "homepage": "https://github.com/leny/twitter-scraper#readme",
+    "bugs": {
+        "url": "https://github.com/leny/twitter-scraper/issues"
+    },
+    "author": {
+        "name": "leny",
+        "url": "https://leny.me",
+        "email": "info@flatland.be"
+    },
+    "main": "./bin/index.js",
+    "files": [
+        "bin"
+    ],
+    "scripts": {
+        "work": "npx babel src --watch --verbose --out-dir bin",
+        "build": "npx babel src --out-dir bin",
+        "prepare": "npx babel src --out-dir bin",
+        "lint": "npx eslint --fix --cache src"
+    },
+    "lint-staged": {
+        "*.js": [
+            "npx eslint --fix --cache",
+            "git add"
+        ]
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "npx lint-staged"
+        }
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/leny/twitter-scraper.git"
+    },
+    "license": "MIT",
+    "dependencies": {
+        "axios": "^0.18.0",
+        "jsdom": "^13.1.0",
+        "lodash.frompairs": "^4.0.1"
+    },
+    "devDependencies": {
+        "@babel/cli": "^7.2.3",
+        "@babel/core": "^7.2.2",
+        "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
+        "@babel/preset-env": "^7.2.3",
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.12.0",
+        "eslint-plugin-prettier": "^3.0.1",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.0",
+        "prettier": "^1.15.3"
+    }
+}

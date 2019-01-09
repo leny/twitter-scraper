@@ -1,0 +1,9 @@
+node_modules
+*.log
+/.eslintcache
+/package-lock.json
+/bin
+/db
+/docker-compose.yml
+/playground
+/docker-readme.md
