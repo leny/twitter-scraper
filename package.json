@@ -1,6 +1,6 @@
 {
     "name": "@leny/twitter-scraper",
-    "version": "0.0.0",
+    "version": "0.1.0",
     "description": "A simple scraper to gather users' stats from twitter profile.",
     "keywords": [
         "tools",
