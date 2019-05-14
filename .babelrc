@@ -1,37 +1,37 @@
 {
-  "env": {
-    "cjs": {
-      "presets": [["@babel/preset-env", {"modules": "cjs"}]]
-    },
-    "esm": {
-      "presets": [
-        [
-          "@babel/preset-env",
-          {
-            "modules": false,
-            "targets": {
-              "esmodules": true
-            }
-          }
-        ]
-      ]
-    }
-  },
-  "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "useBuiltIns": "usage",
-        "corejs": 3,
-        "targets": {
-          "node": "current"
+    "env": {
+        "cjs": {
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "modules": "cjs",
+                        "useBuiltIns": "usage",
+                        "corejs": 3,
+                        "targets": {
+                            "node": "current"
+                        }
+                    }
+                ]
+            ]
+        },
+        "esm": {
+            "presets": [
+                [
+                    "@babel/preset-env",
+                    {
+                        "modules": false,
+                        "useBuiltIns": "usage",
+                        "corejs": 3,
+                        "targets": {
+                            "esmodules": true
+                        }
+                    }
+                ]
+            ]
         }
-      }
-    ]
-  ],
-  "plugins": [
-    "@babel/plugin-proposal-object-rest-spread"
-  ],
-  "compact": true,
-  "comments": false,
+    },
+    "plugins": ["@babel/plugin-proposal-object-rest-spread"],
+    "compact": true,
+    "comments": false
 }
