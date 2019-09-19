@@ -18,15 +18,13 @@
     "email": "info@flatland.be"
   },
   "main": "./bin/cjs/index.js",
-  "module": "./bin/esm/index.js",
   "files": [
     "bin"
   ],
   "scripts": {
     "work": "npx babel src --watch --verbose --out-dir bin",
     "build:cjs": "npx babel src --env-name cjs --out-dir bin/cjs",
-    "build:esm": "npx babel src --env-name esm --out-dir bin/esm",
-    "build": "npm run build:cjs && npm run build:esm",
+    "build": "npm run build:cjs",
     "prepublishOnly": "npm run build",
     "lint": "npx eslint --fix --cache src"
   },
